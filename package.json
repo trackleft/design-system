@@ -7,7 +7,10 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start:storybook:web-components": "yarn workspace @az-digital/az-web-component-storybook storybook"
+    "start:storybook:web-components": "yarn workspace @az-digital/az-web-component-storybook storybook",
+    "lint:storybooks": "yarn workspace @az-digital/az-web-component-storybook lint",
+    "lint:web-components": "yarn workspace @az-digital/az-web-components lint"
+
   },
   "workspaces": ["storybooks/*", "component-libraries/*"]
 }

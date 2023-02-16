@@ -27,6 +27,6 @@
     "storybook": "^7.0.0-beta.47"
   },
   "scripts": {
-    "eslint": "./node_modules/.bin/eslint components/*"
+    "lint": "eslint --fix-dry-run AzBanner/index.js"
   }
 }
