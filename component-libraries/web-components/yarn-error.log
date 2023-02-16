@@ -1,0 +1,63 @@
+Arguments: 
+  /Users/chrisgreen/.nvm/versions/node/v18.14.0/bin/node /Users/chrisgreen/.yarn/bin/yarn.js
+
+PATH: 
+  /Users/chrisgreen/.nvm/versions/node/v18.14.0/bin:/Users/chrisgreen/.yarn/bin:/Users/chrisgreen/.config/yarn/global/node_modules/.bin:/opt/homebrew/opt/php@7.4/bin:/Users/chrisgreen/bin:/usr/local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/MacGPG2/bin:/Library/Apple/usr/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.14.0
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  SyntaxError: /Users/chrisgreen/Sites/ds-chris/packages/web-components/package.json: Unexpected token } in JSON at position 809
+      at JSON.parse (<anonymous>)
+      at /Users/chrisgreen/.yarn/lib/cli.js:1629:59
+      at Generator.next (<anonymous>)
+      at step (/Users/chrisgreen/.yarn/lib/cli.js:310:30)
+      at /Users/chrisgreen/.yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "@az-digital/az-web-components",
+    "version": "2.0.0",
+    "license": "MIT",
+    "dependencies": {
+      "cross-env": "5.0.5"
+    },
+    "main": "index.ts",
+    "module": "index.ts",
+    "devDependencies": {
+      "@babel/core": "^7.20.12",
+      "@storybook/addon-actions": "^7.0.0-beta.47",
+      "@storybook/addon-essentials": "^7.0.0-beta.47",
+      "@storybook/addon-links": "^7.0.0-beta.47",
+      "@storybook/web-components": "^7.0.0-beta.47",
+      "@storybook/web-components-webpack5": "^7.0.0-beta.47",
+      "babel-loader": "^8.3.0",
+      "eslint": "^8.0.1",
+      "eslint-plugin-import": "^2.25.2",
+      "eslint-plugin-n": "^15.0.0",
+      "eslint-plugin-promise": "^6.0.0",
+      "lit-element": "^3.2.2",
+      "lit-html": "^2.6.1",
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "storybook": "^7.0.0-beta.47",
+    },
+    "scripts": {
+      "storybook": "storybook dev -p 6006 --debug-webpack",
+      "build-storybook": "storybook build",
+  		"eslint": "./node_modules/.bin/eslint components/*"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

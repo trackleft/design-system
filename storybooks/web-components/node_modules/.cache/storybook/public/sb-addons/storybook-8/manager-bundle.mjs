@@ -1,0 +1,4 @@
+try{
+var n=__STORYBOOKADDONS__,{addons:t,types:i,mockChannel:d}=__STORYBOOKADDONS__;var c=__STORYBOOKTHEMING__,{CacheProvider:h,ClassNames:b,Global:O,ThemeProvider:f,background:g,color:u,convert:T,create:o,createCache:S,createGlobal:x,createReset:y,css:k,darken:v,ensure:C,ignoreSsrWarning:N,isPropValid:R,jsx:z,keyframes:A,lighten:B,styled:D,themes:G,typography:K,useTheme:Y,withTheme:w}=__STORYBOOKTHEMING__;var s=o({base:"light",brandTitle:"University of Arizona web components",brandUrl:"https://digital.arizona.edu",brandImage:"https://brand.arizona.edu/sites/default/files/ua-banner/ua-web-branding/images/ua_block_a.svg",brandTarget:"_self"});t.setConfig({theme:s});
+}catch(e){ console.error("[Storybook] One of your manager-entries failed: " + import.meta.url, e); }
+//# sourceMappingURL=manager-bundle.mjs.map

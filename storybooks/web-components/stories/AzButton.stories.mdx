@@ -1,0 +1,21 @@
+import { html } from "lit-html";
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import AzButton  from '@az-digital/az-web-components/AzButton';
+
+<Meta title="AzButton" />
+
+# Buttons
+
+
+<Story name="link buttons" args={{ value: 'this is a link' }} >
+  {({ value }) => html`<az-button link='https://www.arizona.edu'>${value}</az-button>`}
+</Story>
+
+Or just use it without link value
+
+<Canvas>
+  <Story name="click buttons" args={{ value: 'this is a button' }} parameters={{ controls: { hideNoControlsWarning: true } }}>
+	{({ value }) => html`<az-button>${value}</az-button>`}
+  </Story>
+</Canvas>
+

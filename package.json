@@ -1,0 +1,14 @@
+{
+  "name": "az-design-system",
+  "version": "2.0.0",
+  "description": "A design system monorepo for creating components.",
+  "repository": "git@github.com:trackleft/design-system.git",
+  "author": "Arizona Digital Contributors",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start:storybook:web-components": "yarn workspace @az-digital/az-web-component-storybook storybook"
+  },
+  "workspaces": ["storybooks/*", "component-libraries/*"]
+}
+

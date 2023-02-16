@@ -1,0 +1,32 @@
+{
+  "name": "@az-digital/az-web-components",
+  "version": "2.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "cross-env": "5.0.5",
+    "lit-element": "^3.2.2"
+  },
+  "main": "index.js",
+  "module": "index.js",
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@storybook/addon-actions": "^7.0.0-beta.47",
+    "@storybook/addon-essentials": "^7.0.0-beta.47",
+    "@storybook/addon-links": "^7.0.0-beta.47",
+    "@storybook/web-components": "^7.0.0-beta.47",
+    "@storybook/web-components-webpack5": "^7.0.0-beta.47",
+    "babel-loader": "^8.3.0",
+    "eslint": "^7.32.0 || ^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "lit-html": "^2.6.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.0.0-beta.47"
+  },
+  "scripts": {
+    "eslint": "./node_modules/.bin/eslint components/*"
+  }
+}
