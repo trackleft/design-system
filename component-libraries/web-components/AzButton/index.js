@@ -1,7 +1,7 @@
 import { LitElement, html } from 'lit-element';
 import { eventDataLayerPush } from '../mixins/shadow-events-datalayer';
 import { DelegateFocusMixin } from '../mixins/delegate-focus-mixin';
-import azButtonStyles from './style';
+import { azButtonStyles, CSSVariables} from './style';
 
 export default class AzButton extends DelegateFocusMixin(LitElement) {
   static get properties() {
@@ -37,7 +37,7 @@ export default class AzButton extends DelegateFocusMixin(LitElement) {
   }
 
   static get styles() {
-    return [azButtonStyles];
+    return [CSSVariables, azButtonStyles];
   }
 
   attributeChangedCallback(name, oldVal, newVal) {

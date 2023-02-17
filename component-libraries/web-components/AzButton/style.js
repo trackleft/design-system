@@ -1,8 +1,6 @@
 import { css } from 'lit-element';
 
 export default css`
-     @import url("https://use.typekit.net/emv3zbo.css");
-     @import url("https://cdn.digital.arizona.edu/lib/az-icons/main/az-icons-styles.css");
 
     .button {
         display: inline-block;
