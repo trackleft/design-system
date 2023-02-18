@@ -1,4 +1,4 @@
-export const eventDataLayerPush = (e, location = '') => {
+export default EventDataLayerPush = (e, location = '') => {
   // Add window.dataLayer if doesnt exist
   window.dataLayer = window.dataLayer || [];
   // Fetch reference to the element that was actually clicked

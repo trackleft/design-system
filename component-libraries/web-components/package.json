@@ -17,16 +17,15 @@
     "@storybook/web-components-webpack5": "^7.0.0-beta.47",
     "babel-loader": "^8.3.0",
     "eslint": "^7.32.0 || ^8.2.0",
-    "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.2",
-    "eslint-plugin-n": "^15.0.0",
-    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-lit": "^1.8.2",
+    "eslint-plugin-wc": "^1.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "storybook": "^7.0.0-beta.47"
   },
   "scripts": {
-    "lint": "eslint --debug --fix-dry-run src/*",
+    "lint": "eslint src/*",
     "start": "parcel index.html --open",
     "build": "parcel build src/* --no-source-maps"
   }

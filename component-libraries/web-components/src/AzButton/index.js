@@ -1,7 +1,7 @@
-import {LitElement, html} from 'lit';
-import { eventDataLayerPush } from '../mixins/shadow-events-datalayer';
+import { LitElement, html } from 'lit';
+import { EventDataLayerPush } from '../mixins/shadow-events-datalayer';
 import { DelegateFocusMixin } from '../mixins/delegate-focus-mixin';
-import { azButtonStyles, CSSVariables} from './style';
+import { azButtonStyles, CSSVariables } from './style';
 
 export default class AzButton extends DelegateFocusMixin(LitElement) {
   static get properties() {
@@ -51,7 +51,7 @@ export default class AzButton extends DelegateFocusMixin(LitElement) {
   }
 
   handleClick(e) {
-    eventDataLayerPush(e, '');
+    EventDataLayerPush(e, '');
     if (this.event) {
       const event = new Event(this.event);
       document.querySelector(this.target).dispatchEvent(event);
@@ -64,7 +64,7 @@ export default class AzButton extends DelegateFocusMixin(LitElement) {
   render() {
     return html`
       ${this.link
-    ? html`<a class="button" href="${this.link}" ?disabled="${this.disabled}" @click="${eventDataLayerPush}" id="${this.elmid}">${this.value}<slot></slot></a>`
+    ? html`<a class="button" href="${this.link}" ?disabled="${this.disabled}" @click="${EventDataLayerPush}" id="${this.elmid}">${this.value}<slot></slot></a>`
     : html`<button type="button" class="button" ?disabled="${this.disabled}" role="presentation" @click="${this.handleClick}" id="${this.elmid}">${this.value}<slot></slot></button>`}
     `;
   }

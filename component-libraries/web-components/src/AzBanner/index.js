@@ -1,5 +1,5 @@
 import { LitElement, html, css } from 'lit';
-import azBannerStyles from "./style";
+import azBannerStyles from './style';
 
 export default class AzBanner extends LitElement {
   static get styles() {
@@ -27,44 +27,46 @@ export default class AzBanner extends LitElement {
       fluid: {
         type: Boolean,
         attribute: true,
-      }
+      },
     };
   }
 
   containerType() {
     if (this.fluid) {
       return css`container container-fluid`;
-    } else {
-      return css`container`;
     }
+    // Default
+    return css`container`;
   }
 
   setLogo() {
     if (this.logoVersion === 'none') {
       return html``;
-    } else if (this.logoVersion === 'a-line-logo') {
+    } if (this.logoVersion === 'a-line-logo') {
       return html`
         <img
           class="arizona-a-line-logo"
           alt="The University of Arizona"
           src="https://brand.arizona.edu/sites/default/files/ua-banner/ua-web-branding/images/ua_a_line_logo_white.svg"
         />`;
-    } else {
-      return html`
+    }
+    // Default
+    return html`
       <img
           class="arizona-line-logo"
           alt="The University of Arizona"
           src="https://cdn.uadigital.arizona.edu/logos/v1.0.0/ua_wordmark_line_logo_white_rgb.min.svg"
       />`;
-    }
   }
 
   setTheme() {
     if (this.theme === 'az-red') {
       return css`bg-red`;
     }
-
+    // Default
+    return css`bg-red`;
   }
+
   constructor() {
     super();
     this.logoVersion = false;
@@ -91,4 +93,4 @@ export default class AzBanner extends LitElement {
     `;
   }
 }
-customElements.get("az-banner") || customElements.define("az-banner", AzBanner);
+customElements.get('az-banner') || customElements.define('az-banner', AzBanner);

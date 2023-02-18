@@ -2,7 +2,7 @@ const $$tabindex = Symbol('tabindex');
 const $$oldTabindex = Symbol('oldTabindex');
 const $$newTabindex = Symbol('newTabindex');
 
-export const DelegateFocusMixin = (superClass) => class extends superClass {
+export default DelegateFocusMixin = (superClass) => class extends superClass {
   static get properties() {
     return {
       tabIndex: {
