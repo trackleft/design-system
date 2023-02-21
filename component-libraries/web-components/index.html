@@ -1,7 +1,19 @@
 <!DOCTYPE html>
 <html>
   <body>
-    <az-banner fluid logoVersion="a-line-logo"></az-banner>
-    <script type="module" src="src/AzBanner/index.js"></script>
+    <az-banner fluid theme="az-red" logoVersion="a-line-logo"></az-banner>
+    <az-banner fluid theme="az-red" logoVersion="line-logo"></az-banner>
+    <div class="outside-of-web-component">
+      <header class="bg-red arizona-header" id="header_arizona" role="banner">
+        <div class="container">
+          <div class="row">
+            <a href='https://www.arizona.edu' class="arizona-logo">
+              <img class="arizona-line-logo" alt="The University of Arizona Wordmark Line Logo White" src="https://cdn.digital.arizona.edu/logos/v1.0.0/ua_wordmark_line_logo_white_rgb.min.svg">
+            </a>
+          </div>
+        </div>
+      </header>
+    </div>
+    <script type="module" src="./src/index.js"></script>
   </body>
 </html>

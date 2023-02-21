@@ -3,11 +3,15 @@
   "version": "2.0.0",
   "license": "MIT",
   "dependencies": {
+    "arizona-bootstrap": "az-digital/arizona-bootstrap",
+    "bootstrap": "twbs/bootstrap",
     "cross-env": "5.0.5",
     "lit": "^2.6.1",
     "parcel": "^2.8.3"
   },
-  "module": "index.js",
+  "source": "src/index.js",
+  "main": "dist/main.js",
+  "module": "dist/module.js",
   "devDependencies": {
     "@babel/core": "^7.20.12",
     "@storybook/addon-actions": "^7.0.0-beta.47",
@@ -22,11 +26,12 @@
     "eslint-plugin-wc": "^1.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "storybook": "^7.0.0-beta.47"
+    "storybook": "^7.0.0-beta.47",
+    "webpack-dev-server": "^4.11.1"
   },
   "scripts": {
     "lint": "eslint src/*",
-    "start": "parcel index.html --open",
-    "build": "parcel build src/* --no-source-maps"
+    "start": "parcel index.html --open  --no-cache",
+    "build": "parcel build src/index.js --no-source-maps"
   }
 }

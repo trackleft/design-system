@@ -1,15 +1,35 @@
 import { html } from "lit-html";
-import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
-import AzBanner  from '@az-digital/az-web-components/src/AzBanner';
+import { Canvas, Meta, Story } from '@storybook/addon-docs';
+import AzBanner  from '@az-digital/az-web-components';
 
-<Meta title="AzBanner" />
+<Meta
+  title="AzBanner"
+  component={AzBanner}
+  argTypes={{
+    theme: {
+      options: ['az-red', 'az-blue'],
+      control: { type: 'radio' }
+    },
+    fluid: {
+      options: ['fluid', ''],
+      control: 'boolean',
+    }
+  }}
+
+/>
+
+export const Template = (args) => {
+  return html`<az-banner ${args.fluid} theme="${args.theme}"></az-banner>`;
+};
 
 # University of Arizona -- Banner
-
 <Canvas>
-
-<Story name="Themes" args={{ value: 'Redbar' }} >
-  {({ value }) => html`<az-banner link='https://www.arizona.edu'>${value}</az-banner>`}
-</Story>
+  <Story
+    name="Primary"
+    args={{
+      theme: 'primary',
+      fluid: false,
+    }}>
+    {Template.bind({})}
+  </Story>
 </Canvas>
-

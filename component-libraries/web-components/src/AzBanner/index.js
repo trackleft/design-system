@@ -1,11 +1,18 @@
-import { LitElement, html, css } from 'lit';
-import azBannerStyles from './style';
+import { LitElement, html, css} from 'lit';
 
-export default class AzBanner extends LitElement {
+// import * as ArizonaBootstrap from 'arizona-bootstrap/dist/css/arizona-bootstrap.min.css';
+// import fs from 'fs';
+
+// const ArizonaBootstrap = fs.readFileSync('../../node_modules/arizona-bootstrap/dist/css/arizona-bootstrap.min.css', 'utf8');
+
+export class AzBanner extends LitElement {
   static get styles() {
-    return [azBannerStyles];
+    return css`
+    * {
+      background-color: black;
+    }
+   `;
   }
-
   static get properties() {
     return {
       /**
@@ -33,10 +40,10 @@ export default class AzBanner extends LitElement {
 
   containerType() {
     if (this.fluid) {
-      return css`container container-fluid`;
+      return 'container container-fluid';
     }
     // Default
-    return css`container`;
+    return 'container';
   }
 
   setLogo() {
@@ -74,11 +81,16 @@ export default class AzBanner extends LitElement {
   }
 
   render() {
+// inject <style> tag
+// let style = document.createElement('style');
+// style.textContent = ArizonaBootstrap;
+// this.shadowRoot.appendChild(style);
+
     return html`
       <header class="${this.setTheme()} arizona-header" id="header_arizona" role="banner">
         <div class="${this.containerType()}">
           <div class="row">
-            <a href='https://www.arizona.edu' className="arizona-logo">
+            <a href='https://www.arizona.edu' class="arizona-logo">
             ${this.setLogo()}
             </a>
             <section class="ml-auto d-none d-lg-block d-xl-block region region-header-ua-utilities">
@@ -94,3 +106,5 @@ export default class AzBanner extends LitElement {
   }
 }
 customElements.get('az-banner') || customElements.define('az-banner', AzBanner);
+
+export default AzBanner;
